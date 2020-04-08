@@ -1,0 +1,344 @@
+
+
+ ..............<<18th February, 2020>>.....................
+
+Todo:
+Why Java versions are called as J2EE, J2SE and J2ME?
+
+
+
+Features of Java:-
+
+1. Object Oriented
+2. Robust
+3. Secure ( Cannot access a particular memory )
+4. Multi-Threaded
+5. Self Documented ( It can develop documents from its own )
+6. Platform Independent
+7. Archetecurally Neutral
+
+Any project should possess three minimum characteristics:
+
+1. Legitimate ( Source code should be readable )
+2. Maintainability ( Minimising Effort required to update )
+3. Reliability
+
+Ways to achieve Legitimacy:-
+
+1. Follow Proper coding standards
+2. Proper naming conventions
+3. Providing commments
+
+
+
+
+JRE = JVM + Other Tools ( Class Loader + JIT + Garbage Collector )
+
+* Coupling and Cohesion ( Loosest Coupling and Highest Cohesion for an application to be maintainable )
+* Reliability:- Fault tolerance
+* JVM, JDK, JRE is not platform Independent.
+
+Ways to achieve Maintainability:-
+
+1. Proper Design
+2. Coupling and Cohesion ( Loosest Coupling and Highest Cohesion for an application to be maintainable )
+3. Modularity must be followed to ensuring loose coupling and high cohesion.
+
+
+Ways to achieve reliability:-
+
+1. Defensive Programming
+2. Exception Handling
+3. Logging ( Storing messages to keep track of application )
+
+
+
+Tokens
+-=-=-=-=-=-=-=-=-=
+
+1. Identifiers ( name given to any programmatic resource )
+2. Keywords
+3. Operators
+4. Literals ( Integer, Floating, String, Character, Boolean, void )
+5. Comments ( End-of-Line Commments, Block Comments )
+
+
+Integer Literals:
+   *Decimal ( 0 to 9 )                24,54,23
+   *Hexa ( 0 to 9, A to F )           0xA1, 0x3D, 0x5
+   *Octa ( 0 to 7 )                   05, 07, 077
+   
+
+Floating:-    12.34
+
+String:-      "Hello World"
+
+Character:-   'A','#'
+
+Boolean:-     true false ( true and false are not keywords )   
+
+Void:-        null
+
+
+* Naming convention for types:- start with capital letter.
+* Naming convention for constants:- all lower case separated by underscore.
+* Naming convention for packages:- should be abbreviated and lower in case.
+* 58 keywords, all are in lower case.
+
+c= 2 * PIE * r;
+In the above example  "2" is a literal.
+                       c,PIE, and r are identifiers.
+                       = and * are operators.
+
+Language constructs:-
+
+1. Looping
+2. Conditional 
+3. Decision Making 
+4. Non-conditional statements
+
+
+* In JDK 1.8 Switch supports String.
+* For loop is used when we know the number of iterations, otherwise we may use while loop.
+* Enhanced for loop has been added from JDK 1.5
+
+Non-conditional Control Structures:-
+1. break
+2. continue
+3. return
+
+
+<<  OOPS   >>
+
+
+* A class is user defined data type which represents a real time entity in terms of its properties and behaviors.
+* Properties are represented by data members or fields.
+* The behavior are represented by member functions or methods.
+
+* An object is a variable of Class type.
+* State is a set of values, enities at a given point of time.
+
+Encapsulation:-
+ 
+  It is achieved by access specifier.
+  There are four access specifiers:-
+   1. private (same class)
+   2. public ( any )
+   3. protected ( inherited )
+   4. default ( same package)
+   
+
+ *All references follow call by references in Java.
+
+*A constructor is a special function that gets immediately invoked after an object is instantiated.
+ -> Class name and constructor should be same.
+ -> They don't return anything not even void.
+ -> There can be more than one constructors in a class as long as they differ in parameters.
+ -> A constructor with 0 parameters is called default constructor, and those who accepts are called parameterized.
+ -> If constructor accepts object of same class, they are called copy constructor.
+ 
+ ----> Only if no constructor is defined then only a default constructor is defined by JVM.
+ ----> "This" refers to the current object of the method.
+ 
+ 
+ 
+ 'static' keyword
+ =-=-=-=-=-=-=-=-=-=-=-
+ 
+  -> can be used as a block called 'static block'
+  
+	static{
+	
+	
+	}
+	
+  -> can be marked on a data member.
+  
+    privte static int x;
+	
+  -> can be marked on a method.	
+  
+    public static void doSomething(){
+	
+	}
+	
+	
+	
+* static block is executed just before class is accessed.
+* data members that are declared static are called class varibales, others are called instance variables.
+* a static data member or static member function can be directly accessed with class name, provided they are public.
+* a static data member cannot access non-static member.
+* this keyword shouldn't be in static method.
+
+
+--> main method is static because it has to be called without creating object. ( It may create a deadlock in other case.)
+
+
+--> Anonymous Objects are the ones which are not referenced by any name.
+
+
+
+
+...................<<<<<<<  19th February   >>>>>>>>>....................
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=
+Polymorphism
+-=-=-=-=-=-=-=-=-=-=-=-=
+
+Overloading -> Two functions are said to be overloading if they belong to the same class or to a super and a subclass and have the same name but differ in number of parameters or parameterized data-types or both.
+
+Overriding -> Two functions are said to be overridden if they belong to a super and a subclass respectively and share the exact signature.
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=
+Inheritance
+-=-=-=-=-=-=-=-=-=-=-=-=
+
+* Creating a new type from an existence type is called Inheritance.
+
+Existing type = Super Type
+New Created   = Subtype
+
+Anything that start with "@" is called annotation. Eg:- @Override
+
+
+--> Super() is used for calling super class constructor from the sub-class.
+
+
+Constructor Phenomenom:-
+
+-> When object of subclass is created default constructor of parent class is called first.
+-> Super keyword is used to call a super class method from within the overridden copy of the current method.
+
+
+
+<<<.....Final Keyword.....>>> 
+
+-> Data member can be made final, it makes it constants.
+-> It can also be used on a class, after that we cannot inherit from that class. ( They are also called leaf classes.)
+-> Final can be applied on a method, after that we cannot override it.
+
+During overridding methods the overridden methods access specifier can be boradened.
+
+We can assign subclass object to a supertype.
+
+To Study:- Dynamic Polymorphism / Late Binding
+
+<<<<<<...... ABSTRACTION.......>>>>>>
+
+When there are multiple implementation of same operation.
+
+ABSTRACTION can be achieved through:-
+i.    abstract method ( no implementation )
+ii.   abstract class
+iii.  interface
+
+
+-> If a class has abstract methods the class should also be abstract.
+-> Abstract classes cannot have instantiated objects,
+-> If there is a subclass for a abstract class then the subclass is bound to overridde and implement all the abstract methods, if not then it should be marked as abstract.
+-> An abstract class need not contain an abstract method.
+-> Abstract classes can have constructors, they may be called from the derived class.
+
+
+
+.........<<<<< INTERFACE >>>>>............
+
+-> An Interface is a special user defined data type that has a list of abstract methods.
+-> It can only have abstract methods and constants.
+-> An Interface represents role.
+-> Multiple Inheritance is supported in Interfaces.
+-> In JDK 1.8 static methods can also be present in Interface.
+-> Abstract and Final cannot be used at same time.
+
+
+
+<<<<<<<21st February >>>>>>> Happy MahaShivratri
+
+
+Has-A realtionship
+Is- A """"""""""""
+Association
+Composition
+Aggregation
+
+
+
+equals method of Object class by default checks for same reference, we have to override is for our convenience.
+
+HashSet is unordered, whereas LinkedHashSet maintains the order in which the elements were inserted.
+
+So if we have to maintain an order we will prefer LinkedHashSet.
+
+#Comparable Interface
+#Comparator Class
+
+TreeSet-> It keeps elements in sorted order.
+
+
+Reference type consume 2 bytes memory.
+
+
+
+Garbage Collection:-
+Mark and Sweep Algorithm
+
+Young Tenure ==> S1 ==> S2 ==> Old Tenure 
+
+
+->String is immutable.
+->StringBuilder is thread-safe while StringBuffer is not.
+->StringBuffer is slower than StringBuilder.
+
+<<<<Exception Handling>>>>>>>
+
+->All exceptions occur at runtime.
+Exceptions checked by compiler are called Compile Time Exceptions.
+
+
+->Collection is an interface.
+->Array and Collections is utility class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

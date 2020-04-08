@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+
+    <body align="center" bgcolor="#f2f2f2">
+        
+        <h1>Welcome</h1>
+       <div id="input">
+           <h3>Enter 1st number</h3>
+           <input id="op1" type="number" placeholder="Enter 1st Number">
+           <h3>Enter 2nd number</h3>
+           <input id="op2" type="number" placeholder="Enter 2nd Number">
+           <h3>Enter 1 for Addition, 2 for Subtraction, 3 for Multiplication and 4 for Divison.</h3>
+           <input id="op3" type="number" placeholder="Add-1, Subtract-2, Multiply-3, Divison-4">
+        </div>
+
+        <div id="result">
+            <h2 id="res"></h2>
+
+        </div>
+
+        <button onclick="calc()"> Calculate </button>
+
+        <script>
+
+            function calc(){
+
+            var op1 = document.getElementById('op1').value
+            var op2 = document.getElementById('op2').value
+            var op3 = document.getElementById('op3').value
+
+            if(op3==1){
+                res=parseInt(op1) + parseInt(op2)
+            }
+            else if(op3==2){
+                res=parseInt(op1) - parseInt(op2)
+            }
+            else if(op3==3){
+                res=parseInt(op1) * parseInt(op2)
+            }
+            else if(op3==4){
+                res= parseInt(op1) / parseInt(op2)
+            }
+            else{
+                res="Wrong Choice, Enter Again!"
+            }
+
+            document.getElementById('res').innerText = res
+
+        }
+
+
+        </script>
+    </body>
+</html>
