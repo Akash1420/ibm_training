@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-dream-app';
+  title :string = 'Welcome to Angular App';
+  courses: Array<any> = [
+    {title: 'Angular', summary:'Framework from Angular'},
+    {title: 'React', summary:'Library from facebook'},
+    {title: 'Ember', summary:'Framework for UI'},
+    {title: 'Js', summary:'Most popular programming language'}
+  ]
+
+  stacks: Array<any> = [
+    {title: 'MEAN', summary:'MongoDB + Express + Angular + Node'},
+    {title: 'MERN', summary:'MongoDB + Express + React + Node'},
+    {title: 'SpringBoot', summary:'Spring Backend(Java)'},
+    {title: 'WAMP', summary:'Windows + Apache + MySQL + PHP'}
+  ]
+
+  
 }
