@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from 'src/app/services/quiz.service';
-import { Quiz } from 'src/app/models/quiz';
+import { Question } from 'src/app/models/question';
+import { Quiz} from 'src/app/models/quiz';
+import { Choice} from 'src/app/models/choice';
 import { Router } from '@angular/router';
 
 
@@ -12,16 +14,19 @@ import { Router } from '@angular/router';
 
 export class QuestionComponent implements OnInit {
   showMessage : boolean = false;
-  quizes: Array<Quiz> = []
+  
+  questions: Array<Question>=[]
+  choices: Array<Choice>=[]
   
 
   constructor(private quizService : QuizService, private router: Router) { }
 
   ngOnInit(): void {
-    this.quizService.fetchAllQuizes()
-    .subscribe((res:Array<Quiz>)=> {
+    this.quizService.fetchAllQuestions()
+    .subscribe((res:Quiz)=> {
       console.log(res);
-      this.quizes = res;
+      this.questions = res.questions;
+      
     })
     
   }

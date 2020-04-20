@@ -1,15 +1,26 @@
-<h2>View Quizes</h2>
+<h3>Below Quizes are Available Now:</h3>
 
 
-<ul class="list-group">
+<!-- <ul class="list-group">
     <li class="list-group-item" *ngFor="let quiz of quizes"> <p>{{quiz.name}} | {{quiz.id}}<button class="btn btn-primary" routerLink="/question" >Go to Quiz</button>
   </ul>
 
-  <hr/>
-  
+  <hr/> -->
+
+ <div class="row">
+   <div class="col-sm-" *ngFor="let quiz of quizes">
+  <div class="card" style="width: 18rem;" >
+    <div class="card-body">
+      <h5 class="card-title">{{quiz.name}}</h5>
+      <p class="card-text">Take {{quiz.name}} quiz</p>
+      <button class="btn btn-primary" routerLink="/question" >Go to Quiz</button>
+    </div>
+  </div>
+  </div>
+  </div>
 
 
-  <table class="table table-striped">
+  <!-- <table class="table table-striped">
     <thead>
       <tr>
         
@@ -26,4 +37,4 @@
          </tr>
        </tbody>
      </ng-container>
-   </table>
+   </table> -->

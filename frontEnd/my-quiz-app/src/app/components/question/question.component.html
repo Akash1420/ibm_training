@@ -8,8 +8,45 @@
   </ul>
 
   <hr/> -->
+
+
+  <ul class="list-group">
+    <li *ngFor="let question of questions"><h4>Q. {{question.text}}</h4>
+      <ul>
+        <li class="list-group-item" *ngFor="let choice of question.choices">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" value="">{{choice.text}}
+            </label>
+          </div>
+        </li>
+      </ul>
+      <br>
+      
+    </li>
+  </ul>
+  <br>
+  <hr>
+
+  <button class="btn btn-primary" >Submit Test</button>
+
+  <br><br>
+
+
+
   
-  <table class="table table-striped">
+  <!-- <ul class="list-group">
+    <li *ngFor="let question of questions">{{question.text}}
+      
+        <input type="radio" *ngFor="let choice of question.choices;">{{choice.text}}
+      
+          
+    </li>
+  </ul> -->
+
+
+  
+  <!-- <table class="table table-striped">
     <thead>
       <tr>
         
@@ -17,13 +54,22 @@
         <th scope="col">Text</th>
       </tr>
     </thead>
-    <ng-container *ngIf="quizes.length">
-       <tbody *ngFor="let quiz of quizes; let i = index">
-         <tr *ngFor="let question of quiz.questions;">
+    <ng-container *ngIf="questions.length">
+       <tbody>
+         <tr *ngFor="let question of questions;">
            <td>{{question.id}}</td>
            <td>{{question.text}}</td>
+           <ol class="list-group">
+            <li class="list-group-item" *ngFor="let choice of question.choices">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" value="">{{choice.text}}
+                </label>
+              </div>
+            </li>
+          </ol>
            
          </tr>
        </tbody>
      </ng-container>
-   </table>
+   </table> -->

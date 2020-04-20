@@ -20,15 +20,18 @@ const quesUrl = 'http://localhost:8000/api/quiz/react'
   providedIn: 'root'
 })
 export class QuizService {
+  name: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    
+  }
 
   fetchAllQuizes(){
     return this.http.get(baseUrl);
   }
 
-  fetchAllQuestions(name: string){
-     return this.http.get(baseUrl+name)
+  fetchAllQuestions(){
+     return this.http.get(quesUrl);
     }
 
 }
