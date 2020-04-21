@@ -1,0 +1,10 @@
+h1{
+    font-size: 100px;
+    text-shadow: 4px 4px 6px orangered;
+}
+
+.card{
+    box-shadow: 0 128px 256px 0 rgba(0, 0, 0, 0.2), 0 256px 512px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 12px;
+    
+}

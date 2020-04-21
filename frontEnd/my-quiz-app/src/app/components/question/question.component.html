@@ -1,16 +1,7 @@
-<!-- <h2>Questions</h2>
 
 
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let question of questions"> <p>{{question}}
-    
-        
-  </ul>
 
-  <hr/> -->
-
-
-  <ul class="list-group">
+  <!-- <ul class="list-group">
     <li *ngFor="let question of questions"><h4>Q. {{question.text}}</h4>
       <ul>
         <li class="list-group-item" *ngFor="let choice of question.choices">
@@ -30,46 +21,48 @@
 
   <button class="btn btn-primary" >Submit Test</button>
 
-  <br><br>
+  <br><br> -->
+
+
+  <div class="container mt-5">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="display-4" style="text-align: center;">Q. {{currentQuestionText}}</h1>
+                <div *ngFor="let c of choices" class="lead mt-2">
+                    <label class="btn btn-primary-outline btn-lg ">
+                      <h2> <input type="radio" (click)="calculate(c.isAnswer)" name="answer"> {{c.text}} </h2>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-sm-5">
+                <span class="lead text-right" *ngIf="! isFirstQuestion">
+                    <button class="btn btn-info btn-lg " (click)="previousQuestion()">Previous Question</button>
+                </span>
+            </div>
+            <div class="col-sm-4">
+              <span class="lead text-center" *ngIf="! isLastQuestion">
+                  <button class="btn btn-info btn-lg" (click)="nextQuestion()">Next Question</button>
+              </span>
+            </div>
+            <div class="col-sm-3">
+                <div class="lead">
+                    <button class="btn btn-primary-outline btn-lg" (click)="viewResult()">Submit Test!</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<br><br>
 
 
 
   
-  <!-- <ul class="list-group">
-    <li *ngFor="let question of questions">{{question.text}}
-      
-        <input type="radio" *ngFor="let choice of question.choices;">{{choice.text}}
-      
-          
-    </li>
-  </ul> -->
+  
 
 
   
-  <!-- <table class="table table-striped">
-    <thead>
-      <tr>
-        
-        <th scope="col">Id</th>
-        <th scope="col">Text</th>
-      </tr>
-    </thead>
-    <ng-container *ngIf="questions.length">
-       <tbody>
-         <tr *ngFor="let question of questions;">
-           <td>{{question.id}}</td>
-           <td>{{question.text}}</td>
-           <ol class="list-group">
-            <li class="list-group-item" *ngFor="let choice of question.choices">
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input type="radio" class="form-check-input" value="">{{choice.text}}
-                </label>
-              </div>
-            </li>
-          </ol>
-           
-         </tr>
-       </tbody>
-     </ng-container>
-   </table> -->
+  

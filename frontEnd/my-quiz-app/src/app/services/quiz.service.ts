@@ -30,8 +30,8 @@ export class QuizService {
     return this.http.get(baseUrl);
   }
 
-  fetchAllQuestions(){
-     return this.http.get(quesUrl);
-    }
+  fetchAllQuestions(quizName:string){
+    return this.http.get(baseUrl+quizName);
+  }
 
 }

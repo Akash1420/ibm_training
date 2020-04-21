@@ -1,5 +1,5 @@
-<h3>Below Quizes are Available Now:</h3>
 
+<h3>Below Quizes are Available Now:</h3><br>
 
 <!-- <ul class="list-group">
     <li class="list-group-item" *ngFor="let quiz of quizes"> <p>{{quiz.name}} | {{quiz.id}}<button class="btn btn-primary" routerLink="/question" >Go to Quiz</button>
@@ -8,12 +8,14 @@
   <hr/> -->
 
  <div class="row">
-   <div class="col-sm-" *ngFor="let quiz of quizes">
+  
+   <div class="col-sm" *ngFor="let quiz of quizes">
   <div class="card" style="width: 18rem;" >
     <div class="card-body">
       <h5 class="card-title">{{quiz.name}}</h5>
       <p class="card-text">Take {{quiz.name}} quiz</p>
-      <button class="btn btn-primary" routerLink="/question" >Go to Quiz</button>
+      <!-- <button class="btn btn-primary" routerLink="/question" >Go to Quiz</button> -->
+      <button class="btn btn-primary" (click)="takeQuiz(quiz)">Take Quiz</button>
     </div>
   </div>
   </div>

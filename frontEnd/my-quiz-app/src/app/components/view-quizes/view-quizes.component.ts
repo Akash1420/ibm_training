@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class ViewQuizesComponent implements OnInit {
   showMessage : boolean = false;
   quizes: Array<Quiz> = []
-  questions: Array<any>
+  // questions: Array<any>
 
   constructor(private quizService : QuizService, private router: Router) { }
 
@@ -24,6 +24,12 @@ export class ViewQuizesComponent implements OnInit {
       this.quizes = res;
     })
     
+  }
+
+  
+  takeQuiz(questions:any){
+    console.log("in take quiz",questions);
+    this.router.navigate(["question",{name:questions.name}]);
   }
 
 }

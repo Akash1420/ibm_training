@@ -4,16 +4,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {Routes, RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
+// import { MatSliderModule } from '@angular/material/slider';
+
 
 
 import { ViewQuizesComponent } from './components/view-quizes/view-quizes.component';
 import { QuestionComponent } from './components/question/question.component';
+import { ResultComponent } from './components/result/result.component';
 
 //1. Define Routes
 const appRoutes: Routes = [
  
   { path: 'view',      component: ViewQuizesComponent },
-  { path: 'question',  component: QuestionComponent}
+  { path: 'question',  component: QuestionComponent},
+  { path: 'viewResult',component: ResultComponent }
   
 ];
 
@@ -22,7 +26,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ViewQuizesComponent,
-    QuestionComponent
+    QuestionComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
