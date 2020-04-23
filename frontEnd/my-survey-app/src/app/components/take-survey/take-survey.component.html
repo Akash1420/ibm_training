@@ -1,0 +1,16 @@
+
+<h3>{{question}}</h3>
+
+<ol>
+    <li *ngFor="let choice of choices">
+       <h4> <input type="radio"> {{choice.choice_text}} </h4>
+        </li>
+
+
+</ol>
+<div class="col-sm-4">
+    <span class="lead text-center" >
+        <button class="btn btn-info btn-lg" >Submit!</button>
+    </span>
+  </div>
+
