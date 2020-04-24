@@ -6,15 +6,15 @@ import {Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ViewSurveysComponent } from './components/view-surveys/view-surveys.component';
-import { AddSurveyComponent } from './components/add-survey/add-survey.component';
 import { TakeSurveyComponent } from './components/take-survey/take-survey.component';
+import { FormComponent } from './components/form/form.component';
 
 
 
 const appRoutes: Routes = [
  
   { path: 'view',      component: ViewSurveysComponent },
-  { path: 'add',  component: AddSurveyComponent},
+  { path: 'add',  component: FormComponent},
   { path: 'takeSurvey',component: TakeSurveyComponent }
   
 ];
@@ -25,12 +25,14 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ViewSurveysComponent,
-    AddSurveyComponent,
-    TakeSurveyComponent
+    TakeSurveyComponent,
+    FormComponent
     
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
