@@ -4,23 +4,43 @@ import './index.css';
 // import App from './App';
 import Badge from './Badge'
 import Clock from './Clock'
+import Dropdown from './Dropdown'
+import Lifecycle from './Lifecycle'
+import Employee from './Employee'
+import App from './App'
 import * as serviceWorker from './serviceWorker';
-import Card from './Card';
 
-setInterval(()=>{
-  var today = new Date();
-  var hours = today.getHours();
-  var minutes = today.getMinutes();
-  var seconds = today.getSeconds();
-  ReactDOM.render(
-    <React.StrictMode>
-      <Badge></Badge>
-      <Clock title="My React Clock!!" hours={hours} minutes={minutes} seconds={seconds}></Clock>
-      <Card title="Card-Clock" hours={hours} minutes={minutes} seconds={seconds}></Card>
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}, 1000)
+
+
+// const element =(<h2>Some title</h2>);
+// ReactDOM.render(element, document.getElementById('message'))
+
+
+// setInterval(()=>{
+//   var today = new Date();
+//   var hours = today.getHours();
+//   var minutes = today.getMinutes();
+//   var seconds = today.getSeconds();
+//   ReactDOM.render(
+//     <React.StrictMode>
+//       <Badge></Badge>
+//       <Clock title="My React Clock!!" hours={hours} minutes={minutes} seconds={seconds}></Clock>
+//     </React.StrictMode>,
+//     document.getElementById('root')
+//   );
+// }, 1000)
+
+ReactDOM.render(
+  <React.StrictMode>
+    {/* <Badge></Badge> */}
+    <Dropdown caption="Select Courses"/>
+     <Lifecycle></Lifecycle>
+     <hr/>
+     <App></App>
+     
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 
