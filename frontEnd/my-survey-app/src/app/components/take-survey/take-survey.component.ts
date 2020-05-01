@@ -49,12 +49,23 @@ export class TakeSurveyComponent implements OnInit {
 
 }
 
-incrementCount(choice_text:string){
-   
+calculate(id:number){
 
-
-}
-
-
-
+  console.log(this.choices);
+  this.choices.forEach(i=>{
+  if(i.id==id){
+  i.count++;
+  }
+  this.surveyService.incrementCount(i)
+  .subscribe(res=>{
+  console.log(res)
+  });
+  });
+  
+  }
+  
+  viewResult(){
+  this.router.navigate(["result"]);
+  }
+  
 }

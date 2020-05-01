@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ViewSurveysComponent } from './components/view-surveys/view-surveys.component';
 import { TakeSurveyComponent } from './components/take-survey/take-survey.component';
 import { FormComponent } from './components/form/form.component';
+import { ResultComponent } from './components/result/result.component';
 
 
 
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
  
   { path: 'view',      component: ViewSurveysComponent },
   { path: 'add',  component: FormComponent},
-  { path: 'takeSurvey',component: TakeSurveyComponent }
+  { path: 'takeSurvey',component: TakeSurveyComponent },
+  { path: 'result', component: ResultComponent}
   
 ];
 
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     AppComponent,
     ViewSurveysComponent,
     TakeSurveyComponent,
-    FormComponent
+    FormComponent,
+    ResultComponent
     
   ],
   imports: [

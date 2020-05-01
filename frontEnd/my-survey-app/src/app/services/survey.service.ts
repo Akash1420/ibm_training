@@ -31,10 +31,14 @@ export class SurveyService {
     return this.http.get(baseUrl+surveyName);
   }
 
-  incrementCount(count: number){
-    this.http.put(choiceUrl,count);
-
-  }
+  incrementCount(choice:Choice){
+    return this.http.put(choiceUrl,
+    choice,{observe : 'response'})
+    }
+    
+    fetchAllChoices(){
+    return this.http.get(choiceUrl);
+    }
 
    
 }
