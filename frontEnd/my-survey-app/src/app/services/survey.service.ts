@@ -24,7 +24,7 @@ export class SurveyService {
    }
 
    fetchAllSurveys(){
-    return this.http.get(cloudUrl1);
+    return this.http.get(baseUrl);
    }
 
    fetchAllOptions(surveyName:string){
