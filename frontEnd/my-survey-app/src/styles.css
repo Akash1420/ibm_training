@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+/* body{
     background-image:  url(../src/assets/background.jpg);
     background-color: linear-gradient(to right, #69B62F, #DE3375);
-    /* background-blend-mode: screen; */
+    
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -10,4 +10,28 @@ body{
 }
 card{
     margin:10px;
+} */
+
+body{
+
+
+background: -webkit-linear-gradient(to bottom, #1D2671, #C33764); 
+background: linear-gradient(to bottom, #1D2671, #C33764); 
+background-repeat: repeat;
+background-size: cover;
+
+}
+
+/* body{
+
+    background-image: url(./assets/bgcel.jpg) ;
+    background-repeat: repeat;
+    background-size: cover;
+    
+    } */
+
+
+html,body{
+    margin:0;
+    height: 100%;
 }

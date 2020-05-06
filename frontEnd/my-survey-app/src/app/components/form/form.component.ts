@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
  h:any;
       addoptions() 
 {
-      console.log("VVVVVVVVVVVVVVVV"+this.fb.control(''));
+      console.log("VVVVVVVV"+this.fb.control(''));
                         this.options.push(this.fb.control(''));
             this.addoptionscount(0);
       }

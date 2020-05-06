@@ -1,7 +1,9 @@
 
 
 .jumbotron{
-    background-color: rgb(255, 19, 90);
+    /* background-color: rgba(0, 0, 0, 0.19); */
+    background-color: turquoise;
+    color:white;
     height:500px;
     width: 100%;
     border-radius: 20px;
@@ -18,13 +20,16 @@
 h1{
     font-size:40px;
     font-weight: bolder;
+    text-decoration: yellowgreen;
+    text-shadow: 7px 7px 14px red;
 }
 h1:hover{
-    text-shadow: 2px 2px 5px red;
+    text-shadow: 5px 5px 11px red;
 }
 
 h2{
     font-size: 25px;
+    color: papayawhip;
 }
 h2:hover{
     text-shadow: 2px 2px 3px chartreuse;

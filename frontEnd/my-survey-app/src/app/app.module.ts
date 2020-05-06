@@ -9,6 +9,9 @@ import { ViewSurveysComponent } from './components/view-surveys/view-surveys.com
 import { TakeSurveyComponent } from './components/take-survey/take-survey.component';
 import { FormComponent } from './components/form/form.component';
 import { ResultComponent } from './components/result/result.component';
+import { InsightsComponent } from './components/insights/insights.component';
+import { AddSurveyComponent } from './components/add-survey/add-survey.component';
+import { SurveyResultComponent } from './components/survey-result/survey-result.component';
 
 
 
@@ -17,7 +20,10 @@ const appRoutes: Routes = [
   { path: 'view',      component: ViewSurveysComponent },
   { path: 'add',  component: FormComponent},
   { path: 'takeSurvey',component: TakeSurveyComponent },
-  { path: 'result', component: ResultComponent}
+  { path: 'result', component: ResultComponent},
+  { path: 'insights', component: InsightsComponent},
+  { path: 'addSurvey', component: AddSurveyComponent},
+  { path: 'surveyResult', component: SurveyResultComponent}
   
 ];
 
@@ -29,7 +35,10 @@ const appRoutes: Routes = [
     ViewSurveysComponent,
     TakeSurveyComponent,
     FormComponent,
-    ResultComponent
+    ResultComponent,
+    InsightsComponent,
+    AddSurveyComponent,
+    SurveyResultComponent
     
   ],
   imports: [
